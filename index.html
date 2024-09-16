@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
 
-    <title>BIG LEAP </title>
-<link rel="icon" href="https://big.dk/favicon.ico"/>    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <title>KOTHARU VENTURES </title>
+    <link href="img/myPics/SECONDARY LOGO - KOTHARU-08.png" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -60,6 +59,7 @@
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    height:0% !important;
 }
 
 .carousel-slides {
@@ -114,26 +114,101 @@
 .hidden {
     display: none;
 }
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative; /* Position relative to enable absolute positioning of controls */
+}
 
+.carousel-inner {
+    position: relative; /* Enable absolute positioning for controls inside the image */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ensure the image is responsive */
+}
+
+/* Styling for prev and next buttons */
 .carousel-prev, .carousel-next {
     position: absolute;
-    top: 50%;
-    background: rgba(0, 0, 0, 0.5);
+    top: 50%; /* Vertically center the buttons */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
-    z-index: 1;
-    transform: translateY(-50%);
+    z-index: 2; /* Make sure the buttons are above the image */
+    font-size: 18px;
+    transition: background 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%); /* Ensure vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Hover effect for buttons */
+.carousel-prev:hover, .carousel-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Left-aligned prev button */
 .carousel-prev {
-    left: 10px;
+    left: 10px; /* Space from the left */
 }
 
+/* Right-aligned next button */
 .carousel-next {
-    right: 10px;
+    right: 10px; /* Space from the right */
 }
+
+/* Media query for screens below 992px */
+@media (max-width: 992px) {
+    .carousel-prev, .carousel-next {
+        font-size: 16px;
+        padding: 12px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Media query for screens below 768px */
+@media (max-width: 768px) {
+    .carousel-prev, .carousel-next {
+        font-size: 14px;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        top: 10%; /* Vertically center the controls */
+        left: 5px;  /* Adjust the left control position */
+        right: 5px; /* Adjust the right control position */
+    }
+}
+/* *{
+    border: 1px solid red;
+} */
+/* Media query for screens below 576px (small devices) */
+/* Media query for screens below 576px */
+@media (max-width: 576px) {
+    .carousel-prev, .carousel-next {
+        font-size: 12px;  /* Further reduction in font size */
+        margin:0px !important;
+        padding: 8px;
+        width: 28px;
+        height: 28px;
+        left: 5px;  /* Adjust for smaller screens */
+        right: 5px;
+        z-index: -5;  /* Move controls towards the top */
+         /* Reset margin-top if used previously */
+    }
+}
+
+
+
+
 
 .carousel-pagination {
     position: absolute;
@@ -303,7 +378,7 @@
                 // Hide loader and show content after animation ends (around 3 seconds)
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            },);
+            },3000);
         };
         const elementsToAnimate = document.querySelectorAll('.onStep');
 
@@ -339,7 +414,7 @@
 
 
                     </button>
-                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
 
@@ -347,7 +422,7 @@
             <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -402,7 +477,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-lg-6 col-md-12">
 
                         <div class="about-text">
                             <p align="left">
@@ -424,16 +499,16 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
                                 BIG has grown organically over the last two decades from a founder, to a family, to a
-                                force of 700. Our latest transformation is the BIG LEAP: Bjarke Ingels Group of
+                                force of 700. Our latest transformation is the KOTHARU VENTURES: Bjarke Ingels Group of
                                 Landscape, Engineering, Architecture, Planning and Products. A plethora of in-house
                                 perspectives allows us to see what none of us would be able to see on our own. The sum
                                 of our individual talents becomes our collective creative genius. A small step for each
-                                of us becomes a BIG LEAP for all of us.<br /><br />
+                                of us becomes a KOTHARU VENTURES for all of us.<br /><br />
 
                                 Bjarke Ingels<br />
                                 Founder & Creative Director
@@ -452,10 +527,10 @@
                     </div>
                 </div>
                 <!-- Landscape -->
-                <div class="row" style="margin-top: 7%;">
+                <div class="row" style="margin-top: 3%;">
                     <h3 align="left">LANDSCAPE</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -465,7 +540,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -477,8 +552,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
-                 
+                <div class="row mb-0">
+                   
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
                         <div class="carousel-slides">
@@ -546,14 +621,15 @@
                         <button class="carousel-next">❯</button>
                         <div class="carousel-pagination"></div>
                     </div>
+                
                 </div>
                 
                 <!-- ENGINEERING -->
                 
-                <div class="row" style="margin-top: 7%;">
+                <div class="row" style="margin-top: 3%;">
                     <h3 align="left">ENGINEERING</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -563,7 +639,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -575,7 +651,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -647,10 +723,10 @@
                 </div>
                    <!-- ARCHITECTURE -->
                 
-                   <div class="row" style="margin-top: 7%;">
+                   <div class="row" style="margin-top: 3%;">
                     <h3 align="left">ARCHITECTURE</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -660,7 +736,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -672,7 +748,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -745,10 +821,10 @@
 
                    <!-- PRODUCTS -->
                 
-                   <div class="row" style="margin-top: 7%;">
+                   <div class="row" style="margin-top: 3%;">
                     <h3 align="left">PRODUCTS</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -758,7 +834,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -770,7 +846,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -842,10 +918,10 @@
                 </div>
                    <!-- PLANNING -->
                 
-                   <div class="row" style="margin-top: 7%;">
+                   <div class="row" style="margin-top: 3%;">
                     <h3 align="left">PLANNING</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -855,7 +931,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -867,7 +943,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -939,10 +1015,10 @@
                 </div>
                    <!-- SUSTAINABILITY -->
                 
-                   <div class="row" style="margin-top: 7%;">
+                   <div class="row" style="margin-top: 3%;">
                     <h3 align="left">SUSTAINABILITY</h3>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -952,7 +1028,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -964,7 +1040,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -1143,14 +1219,14 @@
 
 
            
-            <!-- FAQs End -->
+        
 
             <!-- Footer Start -->
             <div class="footer wow fadeIn" data-wow-delay="0.3s" style="background-color: #fff;color:black;font-size: 15px;">
                 <div class="container">
                     <div class="row">
                         <div class="row">
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-12 col-lg-3">
                                 <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
                                 <div class="extra-contents hiddenss">
                                     <a href="#email1">Email 1</a>
@@ -1160,7 +1236,7 @@
                                     <a href="#email5">Email 5</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-12 col-lg-3">
                                 <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
                                 <div class="extra-contents hiddenss">
                                     <a href="#office1">Office 1</a>
@@ -1170,7 +1246,7 @@
                                     <a href="#office5">Office 5</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-12 col-lg-3">
                                 <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
                                 <div class="extra-contents hiddenss">
                                     <a href="#social1">Social 1</a>
@@ -1180,7 +1256,7 @@
                                     <a href="#social5">Social 5</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-12 col-lg-3">
                                 <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
                                 <div class="extra-contents hiddenss">
                                     <a href="#legal1">Legal 1</a>
@@ -1221,7 +1297,7 @@
                 <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
+                            <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
                         </div>
 
 

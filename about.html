@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BIG LEAP </title>
+    <title>KOTHARU VENTURES </title>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/myPics/SECONDARY LOGO - KOTHARU-08.png" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -31,6 +31,9 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+        body{
+
+        }
         .nav-link {
             color: grey;
             font-size: 15px;
@@ -143,11 +146,204 @@ padding-left: 2%;
 .nav-item{
     list-style-type: none ;
 }
+td {
+    display: table-cell;
+    width: auto; /* Default width */
+}
+@media (max-width: 992px) {
+    .sidebar {
+        display: none; /* Hides the sidebar */
+    }
+    .about td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px; 
+        margin-left: 10%;/* Space between rows */
+    }
+}
+
+/* Optional: Adjust content margin for smaller devices when sidebar is hidden */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0;
+        /* Adjust as needed to make space for content */
+    }
+}
+
+/* Hide sidebar on small devices */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hides the sidebar */
+    }
+    .about td {
+        font-size: 16px; /* Adjust font size if needed */
+        padding: 10px; /* Add padding for better spacing */
+        text-align: left;
+        color:#1a1919;
+    }
+
+.hea{
+    font-size: 13px;
+    color:grey;
+}
+    .content {
+        padding: 5px;
+        /* Adjust padding for better appearance */
+    }
+}
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
+        <!-- Loader Section -->
+        <div id="loader">
+            <div class="loading-text">
+                <span>B</span><span>I</span><span>G</span>
+                <span>L</span><span>E</span><span>A</span><span>P</span>
+            </div>
+        </div>
+        <style>
+            /* Loader Styling */
+            #loader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: black;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            /* Loading Text Styling */
+            .loading-text {
+                font-size: 50px;
+                color: white;
+                display: flex;
+                text-transform: uppercase;
+            }
+    
+            /* Each letter animation */
+            .loading-text span {
+                animation: moveUpAndSplit 3s ease-in-out forwards;
+                display: inline-block;
+                margin: 0 5px;
+                /* Small gap between letters */
+    
+            }
+    
+            /* Keyframes to move and split letters widely */
+            @keyframes moveUpAndSplit {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) translateX(0);
+                }
+    
+                25% {
+                    opacity: 1;
+                    /* Make text visible at 25% */
+                    transform: translateY(-10vh) translateX(0);
+                    /* Slight upward movement */
+                }
+    
+                50% {
+                    opacity: 1;
+                    transform: translateY(-50vh) translateX(calc(var(--split-distance) * 4vw));
+                    /* Move letters halfway up and split more horizontally */
+                }
+    
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100vh) translateX(calc(var(--split-distance) * 8vw));
+                    /* Move letters completely out of view */
+                }
+            }
+    
+            /* Assign larger split distances for each letter */
+            .loading-text span:nth-child(1) {
+                --split-distance: -3;
+            }
+    
+            .loading-text span:nth-child(2) {
+                --split-distance: -2;
+            }
+    
+            .loading-text span:nth-child(3) {
+                --split-distance: -1;
+            }
+    
+            .loading-text span:nth-child(4) {
+                --split-distance: 1;
+            }
+    
+            .loading-text span:nth-child(5) {
+                --split-distance: 2;
+            }
+    
+            .loading-text span:nth-child(6) {
+                --split-distance: 3;
+            }
+    
+            .loading-text span:nth-child(7) {
+                --split-distance: 4;
+            }
+    
+            /* Main content styling */
+            .content {
+                padding: 1rem;
+                text-align: center;
+                color: black;
+                background-color: #fff;
+            }
+    
+            /* Responsive Styling */
+            @media (max-width: 768px) {
+                .loading-text {
+                    font-size: 40px;
+                }
+    
+                .loading-text span {
+                    margin: 0 3px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .loading-text {
+                    font-size: 30px;
+                }
+    
+                .loading-text span {
+                    margin: 0 2px;
+                }
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    // Hide loader and show content after animation ends (around 3 seconds)
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                },3000);
+            };
+            const elementsToAnimate = document.querySelectorAll('.onStep');
+    
+            function animateLetters(element, animationClass, delay) {
+                const letters = element.querySelectorAll('span');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add(animationClass);
+                    }, delay + index * 50); // Delay for each letter
+                });
+            }
+    
+            elementsToAnimate.forEach((element, index) => {
+                animateLetters(element, 'onStep-active', (index + 1) * 300); // 300ms delay between each element
+            });
+    
+    
+        </script>
+        <!-- preloader end -->
+    <div class="wrapper content" id="content" style="display: none;">
         <!-- Top Bar Start -->
 
         <!-- Top Bar End -->
@@ -164,7 +360,7 @@ padding-left: 2%;
 
 
                     </button>
-                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
 
@@ -172,7 +368,7 @@ padding-left: 2%;
             <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -243,81 +439,118 @@ padding-left: 2%;
             <div class="content">
                 <table class="table table-borderless">
                   
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tbody align="left">
+                        <th class="hea">PARTNERS</th>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>2</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>3</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <th class="hea">ASSOCIATE</th>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <th class="hea">DIRECTORS</th>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <th class="hea">BRACELNO</th>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
+                      </tr>
+                      <tr>  
+                        <td><li>Bjarke Ingels</li></td>
+                        <td><li>Sheela Maini</li> </td>
                       </tr>
                       <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><li>hbjk</li></td>
+                        <td><li>Thornton</li></td>
+                    
                       </tr>
                     </tbody>
                   </table>
@@ -326,79 +559,71 @@ padding-left: 2%;
 
             <!-- About End -->
 
-            <!-- news End -->
-
-            <!-- Footer Start -->
-            <section class="mb-5 mt-0" style="margin-left: 10%;">
-                <div class="container">
+           <!-- Footer Start -->
+           <div class="footer wow fadeIn" data-wow-delay="0.3s" style="background-color: #fff;color:black;font-size: 15px;">
+            <div class="container">
+                <div class="row">
                     <div class="row">
-
-                        <div class="footer wow fadeIn" data-wow-delay="0.3s"
-                            style="background-color: #fff;color:black;font-size: 15px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-3">
-                                            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
-                                            <div class="extra-contents hiddenss">
-                                                <a href="#email1">Email 1</a>
-                                                <a href="#email2">Email 2</a>
-                                                <a href="#email3">Email 3</a>
-                                                <a href="#email4">Email 4</a>
-                                                <a href="#email5">Email 5</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span>
-                                            </h5>
-                                            <div class="extra-contents hiddenss">
-                                                <a href="#office1">Office 1</a>
-                                                <a href="#office2">Office 2</a>
-                                                <a href="#office3">Office 3</a>
-                                                <a href="#office4">Office 4</a>
-                                                <a href="#office5">Office 5</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
-                                            <div class="extra-contents hiddenss">
-                                                <a href="#social1">Social 1</a>
-                                                <a href="#social2">Social 2</a>
-                                                <a href="#social3">Social 3</a>
-                                                <a href="#social4">Social 4</a>
-                                                <a href="#social5">Social 5</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-3">
-                                            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
-                                            <div class="extra-contents hiddenss">
-                                                <a href="#legal1">Legal 1</a>
-                                                <a href="#legal2">Legal 2</a>
-                                                <a href="#legal3">Legal 3</a>
-                                                <a href="#legal4">Legal 4</a>
-                                                <a href="#legal5">Legal 5</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script>document.addEventListener('DOMContentLoaded', () => {
-                                            // Add event listeners for toggle buttons
-                                            document.querySelectorAll('.toggle-buttons').forEach(button => {
-                                                button.addEventListener('click', function () {
-                                                    const extraContents = this.parentElement.nextElementSibling;
-                                                    if (extraContents.classList.contains('hiddenss')) {
-                                                        extraContents.classList.remove('hiddenss');
-                                                        this.textContent = '−'; // Change the symbol to minus
-                                                    } else {
-                                                        extraContents.classList.add('hiddenss');
-                                                        this.textContent = '+'; // Change the symbol back to plus
-                                                    }
-                                                });
-                                            });
-                                        });
-                                    </script>
-                                </div>
+                        <div class="col-md-12 col-lg-3">
+                            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#email1">Email 1</a>
+                                <a href="#email2">Email 2</a>
+                                <a href="#email3">Email 3</a>
+                                <a href="#email4">Email 4</a>
+                                <a href="#email5">Email 5</a>
                             </div>
-                            <!-- <div class="container footer-menu">
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#office1">Office 1</a>
+                                <a href="#office2">Office 2</a>
+                                <a href="#office3">Office 3</a>
+                                <a href="#office4">Office 4</a>
+                                <a href="#office5">Office 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#social1">Social 1</a>
+                                <a href="#social2">Social 2</a>
+                                <a href="#social3">Social 3</a>
+                                <a href="#social4">Social 4</a>
+                                <a href="#social5">Social 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-3">
+                            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#legal1">Legal 1</a>
+                                <a href="#legal2">Legal 2</a>
+                                <a href="#legal3">Legal 3</a>
+                                <a href="#legal4">Legal 4</a>
+                                <a href="#legal5">Legal 5</a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>document.addEventListener('DOMContentLoaded', () => {
+                        // Add event listeners for toggle buttons
+                        document.querySelectorAll('.toggle-buttons').forEach(button => {
+                            button.addEventListener('click', function() {
+                                const extraContents = this.parentElement.nextElementSibling;
+                                if (extraContents.classList.contains('hiddenss')) {
+                                    extraContents.classList.remove('hiddenss');
+                                    this.textContent = '−'; // Change the symbol to minus
+                                } else {
+                                    extraContents.classList.add('hiddenss');
+                                    this.textContent = '+'; // Change the symbol back to plus
+                                }
+                            });
+                        });
+                    });
+                    </script>
+                </div>
+            </div>
+            <!-- <div class="container footer-menu">
                     <div class="f-menu">
                         <a href="">Terms of use</a>
                         <a href="">Privacy policy</a>
@@ -407,23 +632,20 @@ padding-left: 2%;
                         <a href="">FQAs</a>
                     </div>
                 </div> -->
-                            <div class="container copyright">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
-                                    </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
+                    </div>
 
 
-                                    <div class="col-md-6">
-                                        <p>Designed By <a href="">AY</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="">AY</a></p>
                     </div>
                 </div>
-            </section>
-            <!-- Footer End -->
+            </div>
+        </div>
+        <!-- Footer End -->
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 

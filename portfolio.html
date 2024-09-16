@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BIG LEAP </title>
-<link rel="icon" href="https://big.dk/favicon.ico"/>
+    <title>KOTHARU VENTURES </title>
+
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <link href="img/myPics/SECONDARY LOGO - KOTHARU-08.png" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -58,34 +58,7 @@
             /* Adjust the degree of rotation for active state */
         }
 
-        .portfolio-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30%;
-            justify-content: center;
-            align-items: center;
-            transform: translateX(110%);
-        }
-
-        .portfolio-item {
-            width: 100%;
-            /* Make each item full width */
-            margin-bottom: 20px;
-            /* Add some space between each item */
-        }
-
-        .portfolio-img img {
-            width: 50%;
-            /* Ensure the images take up full width of the item */
-            object-fit: cover;
-            aspect-ratio: 6/ 4;
-            /* Adjust aspect ratio as needed */
-        }
-
-        .portfolio-text {
-            text-align: center;
-        }
+     
 
         h3 {
             font-size: 12px !important;
@@ -104,7 +77,154 @@
 </head>
 
 <body>
-    <div class="wrapper">
+        <!-- Loader Section -->
+        <div id="loader">
+            <div class="loading-text">
+                <span>B</span><span>I</span><span>G</span>
+                <span>L</span><span>E</span><span>A</span><span>P</span>
+            </div>
+        </div>
+        <style>
+            /* Loader Styling */
+            #loader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: black;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            /* Loading Text Styling */
+            .loading-text {
+                font-size: 50px;
+                color: white;
+                display: flex;
+                text-transform: uppercase;
+            }
+    
+            /* Each letter animation */
+            .loading-text span {
+                animation: moveUpAndSplit 3s ease-in-out forwards;
+                display: inline-block;
+                margin: 0 5px;
+                /* Small gap between letters */
+    
+            }
+    
+            /* Keyframes to move and split letters widely */
+            @keyframes moveUpAndSplit {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) translateX(0);
+                }
+    
+                25% {
+                    opacity: 1;
+                    /* Make text visible at 25% */
+                    transform: translateY(-10vh) translateX(0);
+                    /* Slight upward movement */
+                }
+    
+                50% {
+                    opacity: 1;
+                    transform: translateY(-50vh) translateX(calc(var(--split-distance) * 4vw));
+                    /* Move letters halfway up and split more horizontally */
+                }
+    
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100vh) translateX(calc(var(--split-distance) * 8vw));
+                    /* Move letters completely out of view */
+                }
+            }
+    
+            /* Assign larger split distances for each letter */
+            .loading-text span:nth-child(1) {
+                --split-distance: -3;
+            }
+    
+            .loading-text span:nth-child(2) {
+                --split-distance: -2;
+            }
+    
+            .loading-text span:nth-child(3) {
+                --split-distance: -1;
+            }
+    
+            .loading-text span:nth-child(4) {
+                --split-distance: 1;
+            }
+    
+            .loading-text span:nth-child(5) {
+                --split-distance: 2;
+            }
+    
+            .loading-text span:nth-child(6) {
+                --split-distance: 3;
+            }
+    
+            .loading-text span:nth-child(7) {
+                --split-distance: 4;
+            }
+    
+            /* Main content styling */
+            .content {
+                padding: 1rem;
+                text-align: center;
+                color: black;
+                background-color: #fff;
+            }
+    
+            /* Responsive Styling */
+            @media (max-width: 768px) {
+                .loading-text {
+                    font-size: 40px;
+                }
+    
+                .loading-text span {
+                    margin: 0 3px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .loading-text {
+                    font-size: 30px;
+                }
+    
+                .loading-text span {
+                    margin: 0 2px;
+                }
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    // Hide loader and show content after animation ends (around 3 seconds)
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                },3000);
+            };
+            const elementsToAnimate = document.querySelectorAll('.onStep');
+    
+            function animateLetters(element, animationClass, delay) {
+                const letters = element.querySelectorAll('span');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add(animationClass);
+                    }, delay + index * 50); // Delay for each letter
+                });
+            }
+    
+            elementsToAnimate.forEach((element, index) => {
+                animateLetters(element, 'onStep-active', (index + 1) * 300); // 300ms delay between each element
+            });
+    
+    
+        </script>
+        <!-- preloader end -->
+    <div class="wrapper content" id="content" style="display: none;">
         <!-- Top Bar Start -->
 
         <!-- Top Bar End -->
@@ -121,15 +241,19 @@
 
 
                     </button>
-                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                    <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
-
+<style>
+    *{
+        border:1px solid red
+    }
+</style>
             <!-- Offcanvas Sidebar -->
             <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -159,11 +283,6 @@
 
         </div>
         <!-- Nav Bar End -->
-
-
-        <!-- Page Header Start -->
-
-        <!-- Page Header End -->
 
 
         <!-- Portfolio Start -->
@@ -199,7 +318,7 @@
                 </style>
                 <div class="row portfolio-container">
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/proj1/main.jpg" alt="Image">
@@ -214,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0002.jpg" alt="Image">
@@ -229,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item first wow fadeInUp" data-wow-delay="0.6s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0003.jpg" alt="Image">
@@ -244,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item fourth wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item fourth wow fadeInUp" data-wow-delay="0.3s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0004.jpg" alt="Image">
@@ -259,7 +378,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item fourth wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item fourth wow fadeInUp" data-wow-delay="0.3s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/proj5/main.jpg" alt="Image">
@@ -274,7 +393,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item five wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item five wow fadeInUp" data-wow-delay="0.4s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0005.jpg" alt="Image">
@@ -289,7 +408,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0006.jpg" alt="Image">
@@ -304,7 +423,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0007.jpg" alt="Image">
@@ -319,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0008.jpg" alt="Image">
@@ -334,7 +453,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/Sai Manikanta Construction/IMG-20240815-WA0009.jpg" alt="Image">
@@ -349,7 +468,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-12 col-md-12 col-lg-4 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
                         <div class="portfolio-warp">
                             <div class="portfolio-img">
                                 <img src="img/proj7/main.jpg" alt="Image">
@@ -452,7 +571,7 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
                     </div>
         
         

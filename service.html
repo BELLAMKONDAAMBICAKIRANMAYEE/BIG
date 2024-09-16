@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
 
-    <title>BIG LEAP </title>
-<link rel="icon" href="https://big.dk/favicon.ico"/>    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <title>KOTHARU VENTURES </title>
+    <!-- Favicon -->
+    <link href="img/myPics/SECONDARY LOGO - KOTHARU-08.png.png" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -27,6 +27,9 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+        /* *{
+            border:1px solid red;
+        } */
         .nav-link {
             color: grey;
             font-size: 15px;
@@ -54,12 +57,14 @@
             /* Adjust the degree of rotation for active state */
         }
         
-.carousel {
+        
+        .carousel {
     position: relative;
     width: 100%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    height:0% !important;
 }
 
 .carousel-slides {
@@ -171,6 +176,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+@media screen and (max-width:992px){
+.tab1{
+    display: none;
+}
+}
+@media screen and (min-width:991px){
+    .tab2{
+        display: none;
+    }
 }
     </style>
 </head>
@@ -303,7 +318,7 @@
                 // Hide loader and show content after animation ends (around 3 seconds)
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            },);
+            },3000);
         };
         const elementsToAnimate = document.querySelectorAll('.onStep');
 
@@ -339,7 +354,7 @@
 
 
                     </button>
-                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
 
@@ -347,7 +362,7 @@
             <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -401,13 +416,13 @@
         <div class="about wow fadeInUp" data-wow-delay="0.1s">
 
             <div class="container">
-                <h2 align="left" style="font-size: 40px;">CAREERS</h2>
-                   <!-- SUSTAINABILITY -->
+              
+                   <!-- CAREERS -->
                 
-                   <div class="row" style="margin-top: 2%;">
-                   
+                   <div class="row" style="margin-top: 3%;">
+                    <h2 align="left" style="font-size: 40px;">CAREERS</h2>
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -417,7 +432,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-12 col-md-12 col-lg-6 ">
 
                         <div class="about-text">
                             <p align="left">
@@ -429,7 +444,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-0">
                  
                     <div class="carousel">
                         <button class="carousel-prev">❮</button>
@@ -499,7 +514,7 @@
                         <div class="carousel-pagination"></div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row tab1 mt-5">
                     <table class="table">
                         <thead>
                           <tr>
@@ -588,6 +603,47 @@
                           </tr>
                         </tbody>
                       </table>
+                </div>
+                <div class="row tab2" style="margin-left: 5%;">
+                    <table class="table table-borderless">
+                      
+                        <tbody>
+                          <tr style="display: flex;flex-direction: column;text-align: left;">
+                           
+                            <td><span style="font-size: 12px;color:grey">TITLE </span>- CONSTRUCTING</td><br/>
+                            <td><span style="font-size: 12px;color:grey">JOB AREA</span> - ARCHITECTURE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">LOCATION</span> - BANGALORE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">DEADLINE</span> - AS SOON AS POSSIBLE</td>
+                          
+                          </tr><hr/>
+                          <tr style="display: flex;flex-direction: column;text-align: left;">
+                           
+                            <td><span style="font-size: 12px;color:grey">TITLE </span>- CONSTRUCTING</td><br/>
+                            <td><span style="font-size: 12px;color:grey">JOB AREA</span> - ARCHITECTURE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">LOCATION</span> - BANGALORE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">DEADLINE</span> - AS SOON AS POSSIBLE</td>
+                          
+                          </tr><hr/>
+                          <tr style="display: flex;flex-direction: column;text-align: left;">
+                           
+                            <td><span style="font-size: 12px;color:grey">TITLE </span>- CONSTRUCTING</td><br/>
+                            <td><span style="font-size: 12px;color:grey">JOB AREA</span> - ARCHITECTURE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">LOCATION</span> - BANGALORE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">DEADLINE</span> - AS SOON AS POSSIBLE</td>
+                          
+                          </tr><hr/>
+                          <tr style="display: flex;flex-direction: column;text-align: left;">
+                           
+                            <td><span style="font-size: 12px;color:grey">TITLE </span>- CONSTRUCTING</td><br/>
+                            <td><span style="font-size: 12px;color:grey">JOB AREA</span> - ARCHITECTURE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">LOCATION</span> - BANGALORE</td><br/>
+                            <td><span style="font-size: 12px;color:grey">DEADLINE</span> - AS SOON AS POSSIBLE</td>
+                          
+                          </tr>
+                        </tbody>
+                      </table>
+
+</div>
                 </div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -697,59 +753,61 @@
             <!-- About End -->
 
 
-           
-            <!-- FAQs End -->
-
-            <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s" style="background-color: #fff;color:black;font-size: 15px;">
-                <div class="container">
+         <!-- Footer Start -->
+<section class="mb-5" style="margin-left: 10%;">
+    <div class="container">
+        <div class="row">
+        
+            <div class="footer wow fadeIn" data-wow-delay="0.3s"
+            style="background-color: #fff;color:black;font-size: 15px;">
+            <div class="container">
+                <div class="row">
                     <div class="row">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
-                                <div class="extra-contents hiddenss">
-                                    <a href="#email1">Email 1</a>
-                                    <a href="#email2">Email 2</a>
-                                    <a href="#email3">Email 3</a>
-                                    <a href="#email4">Email 4</a>
-                                    <a href="#email5">Email 5</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
-                                <div class="extra-contents hiddenss">
-                                    <a href="#office1">Office 1</a>
-                                    <a href="#office2">Office 2</a>
-                                    <a href="#office3">Office 3</a>
-                                    <a href="#office4">Office 4</a>
-                                    <a href="#office5">Office 5</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
-                                <div class="extra-contents hiddenss">
-                                    <a href="#social1">Social 1</a>
-                                    <a href="#social2">Social 2</a>
-                                    <a href="#social3">Social 3</a>
-                                    <a href="#social4">Social 4</a>
-                                    <a href="#social5">Social 5</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
-                                <div class="extra-contents hiddenss">
-                                    <a href="#legal1">Legal 1</a>
-                                    <a href="#legal2">Legal 2</a>
-                                    <a href="#legal3">Legal 3</a>
-                                    <a href="#legal4">Legal 4</a>
-                                    <a href="#legal5">Legal 5</a>
-                                </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#email1">Email 1</a>
+                                <a href="#email2">Email 2</a>
+                                <a href="#email3">Email 3</a>
+                                <a href="#email4">Email 4</a>
+                                <a href="#email5">Email 5</a>
                             </div>
                         </div>
-                        <script>document.addEventListener('DOMContentLoaded', () => {
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#office1">Office 1</a>
+                                <a href="#office2">Office 2</a>
+                                <a href="#office3">Office 3</a>
+                                <a href="#office4">Office 4</a>
+                                <a href="#office5">Office 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#social1">Social 1</a>
+                                <a href="#social2">Social 2</a>
+                                <a href="#social3">Social 3</a>
+                                <a href="#social4">Social 4</a>
+                                <a href="#social5">Social 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#legal1">Legal 1</a>
+                                <a href="#legal2">Legal 2</a>
+                                <a href="#legal3">Legal 3</a>
+                                <a href="#legal4">Legal 4</a>
+                                <a href="#legal5">Legal 5</a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>document.addEventListener('DOMContentLoaded', () => {
                             // Add event listeners for toggle buttons
                             document.querySelectorAll('.toggle-buttons').forEach(button => {
-                                button.addEventListener('click', function() {
+                                button.addEventListener('click', function () {
                                     const extraContents = this.parentElement.nextElementSibling;
                                     if (extraContents.classList.contains('hiddenss')) {
                                         extraContents.classList.remove('hiddenss');
@@ -761,33 +819,35 @@
                                 });
                             });
                         });
-                        </script>
-                    </div>
+                    </script>
                 </div>
-                <!-- <div class="container footer-menu">
-                        <div class="f-menu">
-                            <a href="">Terms of use</a>
-                            <a href="">Privacy policy</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div> -->
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <p>Designed By <a href="">AY</a></p>
-                        </div>
+            </div>
+            <!-- <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div> -->
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
+                    </div>
+        
+        
+                    <div class="col-md-6">
+                        <p>Designed By <a href="">AY</a></p>
                     </div>
                 </div>
             </div>
-            <!-- Footer End -->
-
+        </div>
+        </div>
+        </div>
+</section>
+        <!-- Footer End -->
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
 <!-- Landscape -->

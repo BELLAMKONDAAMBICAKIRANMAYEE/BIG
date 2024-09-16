@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BIG LEAP </title>
+    <title>KOTHARU VENTURES </title>
 <link rel="icon" href="https://big.dk/favicon.ico"/>
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/myPics/SECONDARY LOGO - KOTHARU-08.png" rel="icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -31,6 +31,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+       
         .nav-link {
             color: grey;
             font-size: 15px;
@@ -104,10 +105,10 @@
 .sidebar {
     position: fixed; /* Fixes the sidebar in place */
     top: 200px;
-    left: 50px;
-    width: 150px; /* Adjust as needed */
+    left: 25px;
+    width: 100px; /* Adjust as needed */
     height: 100%; /* Full height */
-    background-color: #fff; /* Background color */
+    background-color:transparent; /* Background color */
     padding-top: 20px;
     z-index: 1000; /* Ensures it stays on top of content */
 font-size: 12px;
@@ -118,21 +119,20 @@ height: auto;
 .sidebar a {
     display: block;
     color: grey;
-
+    text-align: left;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
+  
 }
-
+/* .sidebar a li{
+list-style: square;
+} */
 /* Change color on hover */
 .sidebar a:hover {
     text-decoration: underline  dashed grey ;
 }
 
 /* Content area styles */
-.content {
-    margin-left: 220px; /* Space for the sidebar */
-    padding: 20px;
-}
 
 /* Section headings for each section */
 .content section {
@@ -142,15 +142,170 @@ height: auto;
 li{
     list-style-type: none;
 }
+/* Hide sidebar on small to medium devices */
+@media screen and (max-width: 992px) {
+    .sidebar {
+        display: none !important; /* Use !important to override other styles */
+    }
+}
+
+.content {
+    margin-left: 1.5% !important; /* Reset the margin on small devices when sidebar is hidden */
+}
 
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Top Bar Start -->
-
-        <!-- Top Bar End -->
+        <!-- Loader Section -->
+        <div id="loader">
+            <div class="loading-text">
+                <span>B</span><span>I</span><span>G</span>
+                <span>L</span><span>E</span><span>A</span><span>P</span>
+            </div>
+        </div>
+        <style>
+            /* Loader Styling */
+            #loader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: black;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            /* Loading Text Styling */
+            .loading-text {
+                font-size: 50px;
+                color: white;
+                display: flex;
+                text-transform: uppercase;
+            }
+    
+            /* Each letter animation */
+            .loading-text span {
+                animation: moveUpAndSplit 3s ease-in-out forwards;
+                display: inline-block;
+                margin: 0 5px;
+                /* Small gap between letters */
+    
+            }
+    
+            /* Keyframes to move and split letters widely */
+            @keyframes moveUpAndSplit {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) translateX(0);
+                }
+    
+                25% {
+                    opacity: 1;
+                    /* Make text visible at 25% */
+                    transform: translateY(-10vh) translateX(0);
+                    /* Slight upward movement */
+                }
+    
+                50% {
+                    opacity: 1;
+                    transform: translateY(-50vh) translateX(calc(var(--split-distance) * 4vw));
+                    /* Move letters halfway up and split more horizontally */
+                }
+    
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100vh) translateX(calc(var(--split-distance) * 8vw));
+                    /* Move letters completely out of view */
+                }
+            }
+    
+            /* Assign larger split distances for each letter */
+            .loading-text span:nth-child(1) {
+                --split-distance: -3;
+            }
+    
+            .loading-text span:nth-child(2) {
+                --split-distance: -2;
+            }
+    
+            .loading-text span:nth-child(3) {
+                --split-distance: -1;
+            }
+    
+            .loading-text span:nth-child(4) {
+                --split-distance: 1;
+            }
+    
+            .loading-text span:nth-child(5) {
+                --split-distance: 2;
+            }
+    
+            .loading-text span:nth-child(6) {
+                --split-distance: 3;
+            }
+    
+            .loading-text span:nth-child(7) {
+                --split-distance: 4;
+            }
+    
+            /* Main content styling */
+            .content {
+                padding: 1rem;
+                text-align: center;
+                color: black;
+                background-color: #fff;
+            }
+    
+            /* Responsive Styling */
+            @media (max-width: 768px) {
+                .loading-text {
+                    font-size: 40px;
+                }
+    
+                .loading-text span {
+                    margin: 0 3px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .loading-text {
+                    font-size: 30px;
+                }
+    
+                .loading-text span {
+                    margin: 0 2px;
+                }
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    // Hide loader and show content after animation ends (around 3 seconds)
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                },3000);
+            };
+            const elementsToAnimate = document.querySelectorAll('.onStep');
+    
+            function animateLetters(element, animationClass, delay) {
+                const letters = element.querySelectorAll('span');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add(animationClass);
+                    }, delay + index * 50); // Delay for each letter
+                });
+            }
+    
+            elementsToAnimate.forEach((element, index) => {
+                animateLetters(element, 'onStep-active', (index + 1) * 300); // 300ms delay between each element
+            });
+    
+    
+        </script>
+        <!-- preloader end -->
+    <div class="wrapper content" id="content" style="display: none;">
+     
 
         <!-- Nav Bar Start -->
         <div class="container-fluid" style="background-color: #fff;">
@@ -164,7 +319,7 @@ li{
 
 
                     </button>
-                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
 
@@ -172,7 +327,7 @@ li{
             <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -203,13 +358,6 @@ li{
         </div>
         <!-- Nav Bar End -->
 
-
-        <!-- Page Header Start -->
-
-        <!-- Page Header End -->
-
-
-        <!-- news Start -->
         <!-- Page Header Start -->
         <div class="page-header">
             <div class="container">
@@ -240,17 +388,17 @@ li{
                 <section id="news" >
                     <div class="container" style="margin-bottom: 3%;">
                         <div class="row">
-                            <div class="col-lg-2 col-md-2">
-                                <p>20.09.2024</p>
+                            <div class="col-12 col-lg-2">
+                                 <p align="left" style="font-size:14px" >20.09.2024</p>
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
                                 <div class="about-img">
                                     <img src="https://ik.imagekit.io/dlnx2cwu4w/https://live-big-cms.pantheonsite.io/wp-content/uploads/2024/09/harvard-2-2048x1364-1.jpg"
                                         alt="Image">
                                 </div>
 
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
 
                                 <div class="about-text">
                                     <p align="left">
@@ -278,17 +426,17 @@ li{
                 <section id="events">
                     <div class="container" style="margin-bottom: 3%;">
                         <div class="row">
-                            <div class="col-lg-2 col-md-2">
-                                <p>20.09.2024</p>
+                            <div class="col-12 col-lg-2">
+                                 <p align="left" style="font-size:14px" >20.09.2024</p>
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
                                 <div class="about-img">
                                     <img src="https://ik.imagekit.io/dlnx2cwu4w/https://live-big-cms.pantheonsite.io/wp-content/uploads/2024/06/2024.06.03-Reusing-rooftops-034-0K6A4393-br.jpg"
                                         alt="Image">
                                 </div>
 
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
 
                                 <div class="about-text">
                                     <p align="left">
@@ -316,17 +464,17 @@ li{
                 <section id="awards">
                     <div class="container" style="margin-bottom: 3%;">
                         <div class="row">
-                            <div class="col-lg-2 col-md-2">
-                                <p>20.09.2024</p>
+                            <div class="col-12 col-lg-2">
+                                 <p align="left" style="font-size:14px" >20.09.2024</p>
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
                                 <div class="about-img">
                                     <img src="https://ik.imagekit.io/dlnx2cwu4w/https://live-big-cms.pantheonsite.io/wp-content/uploads/2024/06/3Y6A9510.jpg"
                                         alt="Image">
                                 </div>
 
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
 
                                 <div class="about-text">
                                     <p align="left">
@@ -354,17 +502,17 @@ li{
                 <section id="lecturers" >
                     <div class="container" style="margin-bottom: 3%;">
                         <div class="row">
-                            <div class="col-lg-2 col-md-2">
-                                <p>20.09.2024</p>
+                            <div class="col-12 col-lg-2">
+                                 <p align="left" style="font-size:14px" >20.09.2024</p>
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
                                 <div class="about-img">
                                     <img src="https://ik.imagekit.io/dlnx2cwu4w/https://live-big-cms.pantheonsite.io/wp-content/uploads/2024/05/20240430_iF_Trend-Conference_115.jpg"
                                         alt="Image">
                                 </div>
 
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-12 col-lg-4">
 
                                 <div class="about-text">
                                     <p align="left">
@@ -478,7 +626,7 @@ li{
                             <div class="container copyright">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
+                                        <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
                                     </div>
 
 

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BIG LEAP </title>
+<link rel="icon" href="https://big.dk/favicon.ico"/>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://kit.fontawesome.com/942547a0cd.js" crossorigin="anonymous"></script>
+
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .nav-link {
+            color: grey;
+            font-size: 15px;
+            text-align: left;
+            padding: 0%;
+        }
+
+
+        .fa-bars {
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        /* Rotate on hover */
+        .fa-bars:active {
+            transform: rotate(90deg);
+            border: none;
+            /* Adjust the degree of rotation as needed */
+        }
+
+        /* Rotate on active (click) */
+        .fa-bars:hover {
+            transform: rotate(180deg);
+            border: none;
+            /* Adjust the degree of rotation for active state */
+        }
+
+        .portfolio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(110%);
+        }
+
+        .portfolio-item {
+            width: 100%;
+            /* Make each item full width */
+            margin-bottom: 20px;
+            /* Add some space between each item */
+        }
+
+        .portfolio-img img {
+            width: 50%;
+            /* Ensure the images take up full width of the item */
+            object-fit: cover;
+            aspect-ratio: 6/ 4;
+            /* Adjust aspect ratio as needed */
+        }
+
+        .portfolio-text {
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 12px !important;
+        }
+
+        .hiddenss {
+            display: none;
+        }
+
+        .extra-contents a {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Top Bar Start -->
+
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="container-fluid" style="background-color: #fff;">
+            <nav class="navbar">
+                <div class="container-fluid" style="background-color: #fff;">
+                    <!-- Hamburger Menu Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                        <i class="fa-solid fa-bars" style="font-size: 30px;"></i>
+
+
+                    </button>
+                    <!-- <a class="navbar-brand" href="#">MENU</a> -->
+                </div>
+            </nav>
+
+            <!-- Offcanvas Sidebar -->
+            <div class="offcanvas offcanvas-start text-black" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:black">BIG</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">PEOPLE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">CAREERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">PROJECTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">NEWS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- Nav Bar End -->
+
+
+        <!-- Page Header Start -->
+
+        <!-- Page Header End -->
+
+
+        <!-- Portfolio Start -->
+        <div class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-flters">
+                            <!-- <li data-filter="*" class="filter-active">All</li> -->
+                            <li data-filter=".first" class="filter-list" data-id="landscape">LANDSCAPE</li>
+                            <li data-filter=".second" class="filter-list" data-id="engineering">ENGINEERING</li>
+                            <li data-filter=".third" class="filter-list" data-id="architecture">ARCHITECTURE</li>
+                            <li data-filter=".fourth" class="filter-list" data-id="planning">PLANNING</li>
+                            <li data-filter=".five" class="filter-list" data-id="products">PRODUCTS</li>
+                        </ul>
+        
+                        <!-- Hidden Sub-list Placeholders -->
+                        <div id="landscape" class="sub-list" style="display: none; ">
+                            <a href="portfolio.html"><li>Landscape Project 1</li></a><br>
+                            <a href="portfolio.html"><li>Landscape Project 2</li></a><br>
+                            <a href="portfolio.html"><li>Landscape Project 3</li></a><br>
+                        </div>
+        
+                        <div id="engineering" class="sub-list" style="display: none; ">
+                            <a href="portfolio.html"><li>Engineering Project 1</li></a><br>
+                            <a href="portfolio.html"><li>Engineering Project 2</li></a><br>
+                            <a href="portfolio.html"><li>Engineering Project 3</li></a><br>
+                        </div>
+        
+                        <div id="architecture" class="sub-list" style="display: none; ">
+                            <a href="portfolio.html"><li>Architecture Project 1</li></a><br>
+                            <a href="portfolio.html"><li>Architecture Project 2</li></a><br>
+                            <a href="portfolio.html"><li>Architecture Project 3</li></a><br>
+                        </div>
+        
+                        <div id="planning" class="sub-list" style="display: none; ">
+                            <a href="portfolio.html"><li>Planning Project 1</li></a><br>
+                            <a href="portfolio.html"><li>Planning Project 2</li></a><br>
+                            <a href="portfolio.html"><li>Planning Project 3</li></a><br>
+                        </div>
+        
+                        <div id="products" class="sub-list" style="display: none; ">
+                            <a href="portfolio.html"><li>Product </li></a><br>
+                            <a href="portfolio.html"><li>Product 2</li></a><br>
+                            <a href="portfolio.html"><li>Product 3</li></a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.filter-list').forEach(item => {
+                item.addEventListener('click', function() {
+                    // Hide all sub-lists first
+                    document.querySelectorAll('.sub-list').forEach(sub => {
+                        sub.style.display = 'none';
+                    });
+        
+                    // Show the sub-list related to the clicked item
+                    let subListId = this.getAttribute('data-id');
+                    document.getElementById(subListId).style.display = 'block';
+                });
+            });
+        </script>
+        
+        <style>
+            /* Ensure links are styled for visibility */
+            .sub-list a {
+    display: flex;
+    flex-direction: row; /* This makes the anchor tags appear in a row */
+    color: #000; /* Text color */
+    margin-right: 20px; /* Space between items */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size, adjust as needed */
+    justify-content: center;
+}
+
+.sub-list {
+   margin-top: 20px;  /* Space above the sub-list */
+}
+
+
+        
+            /* Style the filter list items */
+            #portfolio-flters li {
+                cursor: pointer;
+                padding: 5px 10px;
+                list-style: none;
+                display: inline-block;
+                margin-right: 15px;
+                font-size: 16px;
+            }
+        
+            /* Style the active list item */
+            .filter-active {
+                font-weight: bold;
+                color: #007bff;
+            }
+        </style>
+        
+        <!-- Portfolio End -->
+
+        <!-- Footer Start -->
+<section class="mb-5 mt-0" style="margin-left: 10%;">
+    <div class="container">
+        <div class="row">
+        
+            <div class="footer wow fadeIn" data-wow-delay="0.3s"
+            style="background-color: #fff;color:black;font-size: 15px;">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#email1">Email 1</a>
+                                <a href="#email2">Email 2</a>
+                                <a href="#email3">Email 3</a>
+                                <a href="#email4">Email 4</a>
+                                <a href="#email5">Email 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#office1">Office 1</a>
+                                <a href="#office2">Office 2</a>
+                                <a href="#office3">Office 3</a>
+                                <a href="#office4">Office 4</a>
+                                <a href="#office5">Office 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#social1">Social 1</a>
+                                <a href="#social2">Social 2</a>
+                                <a href="#social3">Social 3</a>
+                                <a href="#social4">Social 4</a>
+                                <a href="#social5">Social 5</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
+                            <div class="extra-contents hiddenss">
+                                <a href="#legal1">Legal 1</a>
+                                <a href="#legal2">Legal 2</a>
+                                <a href="#legal3">Legal 3</a>
+                                <a href="#legal4">Legal 4</a>
+                                <a href="#legal5">Legal 5</a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>document.addEventListener('DOMContentLoaded', () => {
+                            // Add event listeners for toggle buttons
+                            document.querySelectorAll('.toggle-buttons').forEach(button => {
+                                button.addEventListener('click', function () {
+                                    const extraContents = this.parentElement.nextElementSibling;
+                                    if (extraContents.classList.contains('hiddenss')) {
+                                        extraContents.classList.remove('hiddenss');
+                                        this.textContent = '−'; // Change the symbol to minus
+                                    } else {
+                                        extraContents.classList.add('hiddenss');
+                                        this.textContent = '+'; // Change the symbol back to plus
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+            <!-- <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div> -->
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="">BIG LEAP</a>, All Right Reserved.</p>
+                    </div>
+        
+        
+                    <div class="col-md-6">
+                        <p>Designed By <a href="">AY</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+</section>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

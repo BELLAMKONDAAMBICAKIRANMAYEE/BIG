@@ -88,6 +88,7 @@
     </div>
     <style>
         /* Loader Styling */
+        
         #loader {
             display: flex;
             justify-content: center;
@@ -210,7 +211,7 @@
                 // Hide loader and show content after animation ends (around 3 seconds)
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            },3000);
+            },1500);
         };
         const elementsToAnimate = document.querySelectorAll('.onStep');
 
@@ -243,7 +244,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 
-                        <i class="fa-solid fa-bars" style="font-size: 39px;"></i>
+                        <i class="fa-solid fa-bars"></i>
 
 
                     </button>

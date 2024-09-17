@@ -31,7 +31,48 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-       
+       /* Default for small devices (0px to 991px) */
+.offcanvas {
+    width: 150px; /* Default initial width */
+}
+
+.nav-link {
+    font-size: 12px; /* Default font size for nav links */
+}
+
+.offcanvas-title {
+    font-size: 16px; /* Default font size for the offcanvas title */
+}
+
+/* For devices between 0px and 991px (mobile & tablet sizes) */
+@media (max-width: 991px) {
+    .offcanvas {
+        width: 500px !important; /* Set the width to 600px for small devices */
+    }
+
+    .nav-link {
+        font-size: 3rem !important; /* Set font size for nav links up to 991px */
+    }
+
+    .offcanvas-title {
+        font-size: 3.5rem !important; /* Set larger font size for the offcanvas title */
+    }
+}
+
+/* For devices larger than 991px */
+@media (min-width: 992px) {
+    .offcanvas {
+        width: 300px; /* Set the width for larger devices */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Set font size for nav links for larger devices */
+    }
+
+    .offcanvas-title {
+        font-size: 20px; /* Set larger font size for the offcanvas title on bigger screens */
+    }
+}
         .nav-link {
             color: grey;
             font-size: 15px;

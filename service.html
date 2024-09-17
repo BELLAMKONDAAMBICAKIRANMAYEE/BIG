@@ -192,10 +192,13 @@
 
 <body>
     <!-- Loader Section -->
-    <div id="loader">
+     <!-- Loader Section -->
+     <div id="loader">
         <div class="loading-text">
-            <span>B</span><span>I</span><span>G</span>
-            <span>L</span><span>E</span><span>A</span><span>P</span>
+            <span style="width:10%;">
+                <img id="dynamic-image" src="img/myPics/SECONDARY LOGO - KOTHARU-07.png" width="80%" />
+            </span>
+            <span>K</span><span>O</span><span>T</span><span>H</span><span>A</span><span>R</span><span>U</span>
         </div>
     </div>
     <style>
@@ -212,10 +215,12 @@
 
         /* Loading Text Styling */
         .loading-text {
-            font-size: 50px;
+            font-size: 40px;
             color: white;
             display: flex;
+            font-weight: 700;
             text-transform: uppercase;
+            justify-content: center !important;
         }
 
         /* Each letter animation */
@@ -256,33 +261,35 @@
 
         /* Assign larger split distances for each letter */
         .loading-text span:nth-child(1) {
-            --split-distance: -3;
+            --split-distance: -6;
         }
 
         .loading-text span:nth-child(2) {
-            --split-distance: -2;
+            --split-distance: -4;
         }
 
         .loading-text span:nth-child(3) {
-            --split-distance: -1;
+            --split-distance: -3;
         }
 
         .loading-text span:nth-child(4) {
-            --split-distance: 1;
+            --split-distance: -2;
         }
 
         .loading-text span:nth-child(5) {
-            --split-distance: 2;
+            --split-distance: -1;
         }
 
         .loading-text span:nth-child(6) {
-            --split-distance: 3;
+            --split-distance: 0;
         }
 
         .loading-text span:nth-child(7) {
-            --split-distance: 4;
+            --split-distance: 1;
         }
-
+        .loading-text span:nth-child(8) {
+            --split-distance: 2;
+        }
         /* Main content styling */
         .content {
             padding: 1rem;
@@ -338,6 +345,7 @@
 
     </script>
     <!-- preloader end -->
+    <!-- preloader end -->
     <div class="wrapper content" id="content" style="display: none;">
 
 
@@ -354,7 +362,7 @@
 
 
                     </button>
-                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="10%" style="float: right;margin-top: -7%;"/></a>
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO - KOTHARU-05.png" width="15%" style="float: right;margin-top: -7%;"/></a>
                 </div>
             </nav>
 
@@ -395,31 +403,17 @@
         <!-- Nav Bar End -->
 
 
-        <!-- Page Header Start -->
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                      
-                    </div>
-                    <!-- <div class="col-12">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About Us</a>
-                        </div> -->
-                </div>
-            </div>
-        </div>
-        <!-- Page Header End -->
+      
 
 
         <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6%;">
 
             <div class="container">
               
                    <!-- CAREERS -->
                 
-                   <div class="row" style="margin-top: 3%;">
+                   <div class="row" style="margin-top: -2%;">
                     <h2 align="left" style="font-size: 40px;">CAREERS</h2>
 
                     <div class="col-12 col-md-12 col-lg-6 ">

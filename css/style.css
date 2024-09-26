@@ -506,7 +506,7 @@ a:focus {
     
 .feature .col-md-12:nth-child(2n) {
     color: #364967;
-    background: #fff;
+    background: #b4ccee;
 }
 
 .feature .feature-item {
@@ -1812,8 +1812,14 @@ a:focus {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #364967;
+    /* background: #364967;
     color: #fff;
+    width:20%; */
+    
+}
+.filter-list:hover{
+   
+    text-decoration: underline overline 2px solid #3b5998;
 }
 
 .portfolio .load-more {

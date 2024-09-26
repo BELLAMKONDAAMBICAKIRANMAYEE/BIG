@@ -146,11 +146,11 @@
 .sidebar {
     position: fixed; /* Fixes the sidebar in place */
     top: 200px;
-    left: 60px;
-    width: 150px; /* Adjust as needed */
+    left: 0px;
+    width: 130px; /* Adjust as needed */
     height: 100%; /* Full height */
     background-color: #fff; /* Background color */
-    padding-top: 20px;
+    padding-top: 15px;
     z-index: 1000; /* Ensures it stays on top of content */
 font-size: 12px;
 height:auto;
@@ -173,8 +173,8 @@ padding-left: 2%;
 
 /* Content area styles */
 .content {
-    margin-left: 220px; /* Space for the sidebar */
-    padding: 20px;
+    margin-left: 0px; /* Space for the sidebar */
+    padding-left: 64px;
 }
 
 /* Section headings for each section */
@@ -236,162 +236,44 @@ td {
 
 <body>
          <!-- Loader Section -->
-    <div id="loader">
-        <div class="loading-text">
-            <span style="width:10%;">
-                <img id="dynamic-image" src="img/myPics/SECONDARY LOGO - KOTHARU-07.png" width="80%" />
-            </span>
-            <span>K</span><span>O</span><span>T</span><span>H</span><span>A</span><span>R</span><span>U</span>
+         <div id="loader">
+            <video id="preloader-video" autoplay muted loop>
+                <source src="./img/myPics/Kotharu Ventures.mp4" type="video/mp4">
+               
+            </video>
         </div>
-    </div>
-    <style>
-        /* Loader Styling */
+        <style>
+            /* Loader Styling */
         #loader {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #364967;
+            background-color:black;
             position: relative;
             overflow: hidden;
+            width:100vw;
         }
-
-        /* Loading Text Styling */
-        .loading-text {
-            font-size: 40px;
-            color: white;
-            display: flex;
-            font-weight: 700;
-            text-transform: uppercase;
-            justify-content: center !important;
+        
+        #preloader-video {
+            max-width: 100%;
+            max-height: 100%;
         }
-
-        /* Each letter animation */
-        .loading-text span {
-            animation: moveUpAndSplit 3s ease-in-out forwards;
-            display: inline-block;
-            margin: 0 5px;
-            /* Small gap between letters */
-
-        }
-
-        /* Keyframes to move and split letters widely */
-        @keyframes moveUpAndSplit {
-            0% {
-                opacity: 1;
-                transform: translateY(0) translateX(0);
-            }
-
-            25% {
-                opacity: 1;
-                /* Make text visible at 25% */
-                transform: translateY(-10vh) translateX(0);
-                /* Slight upward movement */
-            }
-
-            50% {
-                opacity: 1;
-                transform: translateY(-50vh) translateX(calc(var(--split-distance) * 4vw));
-                /* Move letters halfway up and split more horizontally */
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(-100vh) translateX(calc(var(--split-distance) * 8vw));
-                /* Move letters completely out of view */
-            }
-        }
-
-        /* Assign larger split distances for each letter */
-        .loading-text span:nth-child(1) {
-            --split-distance: -6;
-        }
-
-        .loading-text span:nth-child(2) {
-            --split-distance: -4;
-        }
-
-        .loading-text span:nth-child(3) {
-            --split-distance: -3;
-        }
-
-        .loading-text span:nth-child(4) {
-            --split-distance: -2;
-        }
-
-        .loading-text span:nth-child(5) {
-            --split-distance: -1;
-        }
-
-        .loading-text span:nth-child(6) {
-            --split-distance: 0;
-        }
-
-        .loading-text span:nth-child(7) {
-            --split-distance: 1;
-        }
-        .loading-text span:nth-child(8) {
-            --split-distance: 2;
-        }
-        /* Main content styling */
-        .content {
-            padding: 1rem;
-            text-align: center;
-            color: #364967;
-            background-color: #fff;
-        }
-
-        /* Responsive Styling */
-        @media (max-width: 768px) {
-            .loading-text {
-                font-size: 40px;
-            }
-
-            .loading-text span {
-                margin: 0 3px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .loading-text {
-                font-size: 30px;
-            }
-
-            .loading-text span {
-                margin: 0 2px;
-            }
-        }
-    </style>
-    <script>
-        window.onload = function () {
+        
+        </style>
+        <script>
+            window.onload = function () {
             setTimeout(function () {
-                // Hide loader and show content after animation ends (around 3 seconds)
+                // Hide loader and show content after 3 seconds (or adjust as needed)
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            },1500);
+            }, 3000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
         };
-        const elementsToAnimate = document.querySelectorAll('.onStep');
-
-        function animateLetters(element, animationClass, delay) {
-            const letters = element.querySelectorAll('span');
-            letters.forEach((letter, index) => {
-                setTimeout(() => {
-                    letter.classList.add(animationClass);
-                }, delay + index * 50); // Delay for each letter
-            });
-        }
-
-        elementsToAnimate.forEach((element, index) => {
-            animateLetters(element, 'onStep-active', (index + 1) * 300); // 300ms delay between each element
-        });
-
-
-    </script>
+        
+            </script>
     <!-- preloader end -->
     <div class="wrapper content" id="content" style="display: none;">
-        <!-- Top Bar Start -->
 
-        <!-- Top Bar End -->
 
         <!-- Nav Bar Start -->
         <div class="container-fluid" style="background-color: #fff;">
@@ -478,7 +360,7 @@ td {
             <div class="content">
                 <table class="table table-borderless">
                   
-                    <tbody align="left">
+                    <tbody align="justify">
                         <th class="hea">PARTNERS</th>
                       <tr>  
                         <td><li>Bjarke Ingels</li></td>
@@ -597,99 +479,92 @@ td {
 
 
             <!-- About End -->
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s"
+style="background-color: #fff;color:#364967;font-size: 15px;">
+<div class="container">
+    <div class="row">
 
-           <!-- Footer Start -->
-           <div class="footer wow fadeIn" data-wow-delay="0.3s" style="background-color: #fff;color:#364967;font-size: 15px;">
-            <div class="container">
-                <div class="row">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
-                            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
-                            <div class="extra-contents hiddenss">
-                                <a href="#email1">Email 1</a>
-                                <a href="#email2">Email 2</a>
-                                <a href="#email3">Email 3</a>
-                                <a href="#email4">Email 4</a>
-                                <a href="#email5">Email 5</a>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-3">
-                            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
-                            <div class="extra-contents hiddenss">
-                                <a href="#office1">Office 1</a>
-                                <a href="#office2">Office 2</a>
-                                <a href="#office3">Office 3</a>
-                                <a href="#office4">Office 4</a>
-                                <a href="#office5">Office 5</a>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-3">
-                            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
-                            <div class="extra-contents hiddenss">
-                                <a href="#social1">Social 1</a>
-                                <a href="#social2">Social 2</a>
-                                <a href="#social3">Social 3</a>
-                                <a href="#social4">Social 4</a>
-                                <a href="#social5">Social 5</a>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-3">
-                            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
-                            <div class="extra-contents hiddenss">
-                                <a href="#legal1">Legal 1</a>
-                                <a href="#legal2">Legal 2</a>
-                                <a href="#legal3">Legal 3</a>
-                                <a href="#legal4">Legal 4</a>
-                                <a href="#legal5">Legal 5</a>
-                            </div>
-                        </div>
-                    </div>
-                    <script>document.addEventListener('DOMContentLoaded', () => {
-                        // Add event listeners for toggle buttons
-                        document.querySelectorAll('.toggle-buttons').forEach(button => {
-                            button.addEventListener('click', function() {
-                                const extraContents = this.parentElement.nextElementSibling;
-                                if (extraContents.classList.contains('hiddenss')) {
-                                    extraContents.classList.remove('hiddenss');
-                                    this.textContent = '−'; // Change the symbol to minus
-                                } else {
-                                    extraContents.classList.add('hiddenss');
-                                    this.textContent = '+'; // Change the symbol back to plus
-                                }
-                            });
-                        });
-                    });
-                    </script>
-                </div>
-            </div>
-            <!-- <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div> -->
-            <div class="container copyright">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
-                    </div>
-
-
-                    <div class="col-md-6">
-                        <p>Designed By <a href="">AY</a></p>
-                    </div>
-                </div>
+        <div class="col-md-12 col-lg-3 text-center">
+            <h5 class="toggle-section">EMAIL <span class="toggle-buttons">+</span></h5>
+            <div class="extra-contents hiddenss">
+                <a href="#email1">Email 1</a>
+                <a href="#email2">Email 2</a>
+                <a href="#email3">Email 3</a>
+                <a href="#email4">Email 4</a>
+                <a href="#email5">Email 5</a>
             </div>
         </div>
-        <!-- Footer End -->
+        <div class="col-md-12 col-lg-3 text-center">
+            <h5 class="toggle-section">OFFICES <span class="toggle-buttons">+</span></h5>
+            <div class="extra-contents hiddenss">
+                <a href="#office1">Office 1</a>
+                <a href="#office2">Office 2</a>
+                <a href="#office3">Office 3</a>
+                <a href="#office4">Office 4</a>
+                <a href="#office5">Office 5</a>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-3 text-center">
+            <h5 class="toggle-section">SOCIAL <span class="toggle-buttons">+</span></h5>
+            <div class="extra-contents hiddenss">
+                <a href="#social1">Social 1</a>
+                <a href="#social2">Social 2</a>
+                <a href="#social3">Social 3</a>
+                <a href="#social4">Social 4</a>
+                <a href="#social5">Social 5</a>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-3 text-center">
+            <h5 class="toggle-section">LEGAL <span class="toggle-buttons">+</span></h5>
+            <div class="extra-contents hiddenss">
+                <a href="#legal1">Legal 1</a>
+                <a href="#legal2">Legal 2</a>
+                <a href="#legal3">Legal 3</a>
+                <a href="#legal4">Legal 4</a>
+                <a href="#legal5">Legal 5</a>
+            </div>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+            // Add event listeners for toggle buttons
+            document.querySelectorAll('.toggle-buttons').forEach(button => {
+                button.addEventListener('click', function () {
+                    const extraContents = this.parentElement.nextElementSibling;
+                    if (extraContents.classList.contains('hiddenss')) {
+                        extraContents.classList.remove('hiddenss');
+                        this.textContent = '−'; // Change the symbol to minus
+                    } else {
+                        extraContents.classList.add('hiddenss');
+                        this.textContent = '+'; // Change the symbol back to plus
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+</div>
+
+<div class="container copyright mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p style="font-size: 15px;">&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
+            <p>Designed By <a href="">AY</a></p>
+        </div>
+
+
+        
+           
+        
+    </div>
+</div>
+
+<!-- Footer End -->
 
             <a href="#content" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
         </div>
-
+</div>
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>

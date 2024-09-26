@@ -79,26 +79,45 @@
             padding: 0%;
         }
 
+/* Default Style */
+.fa-bars {
+    font-size: 39px;
+    transition: transform 0.3s ease;
+}
 
-        .fa-bars {
-            transition: transform 0.3s ease;
-            border: none;
-        }
+/* Rotate on hover */
+.fa-bars:active {
+    transform: rotate(90deg);
+    border: none; /* Adjust the degree of rotation as needed */
+}
 
-        /* Rotate on hover */
-        .fa-bars:active {
-            transform: rotate(90deg);
-            border: none;
-            /* Adjust the degree of rotation as needed */
-        }
+/* Rotate on active (click) */
+.fa-bars:hover {
+    transform: rotate(180deg);
+    border: none; /* Adjust the degree of rotation for active state */
+}
 
-        /* Rotate on active (click) */
-        .fa-bars:hover {
-            transform: rotate(180deg);
-            border: none;
-            /* Adjust the degree of rotation for active state */
-        }
-        
+/* Media query for screens smaller than 992px */
+@media (max-width: 991px) {
+    .fa-bars {
+        font-size: 100px !important; /* Set the font size to 100px */
+    }
+}
+
+.navbar-brand img {
+    width: 15%; /* Default width for large screens */
+    float: right;
+    margin-top: 0; /* Ensure no top margin by default */
+}
+
+/* Media Query for screens smaller than 992px */
+@media (max-width: 991px) {
+   
+    .navbar-brand img {
+        width: 30% !important; /* Increase width to 30% for smaller screens */
+        /* Move the image 2% down from the top */
+    }
+}
         
         .carousel {
     position: relative;
@@ -265,7 +284,7 @@
             // Hide loader and show content after 3 seconds (or adjust as needed)
             document.getElementById('loader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 3000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
+        }, 2000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
     };
     
         </script>
@@ -282,12 +301,12 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 
-                        <i class="fa-solid fa-bars" style="font-size: 39px;"></i>
+                        <i class="fa-solid fa-bars"></i>
 
 
                     </button>
                    
-                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png" width="15%" style="float: right;margin-top: -4%;"/></a>
+                     <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png" width="15%" style="float: right;"/></a>
                 </div>
             </nav>
 

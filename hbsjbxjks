@@ -26,6 +26,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+
         /* Default for small devices (0px to 991px) */
         .offcanvas {
             width: 150px;
@@ -121,45 +122,59 @@
         }
 
 
-    /* Default Style */
-.fa-bars {
-    font-size: 39px;
-    transition: transform 0.3s ease;
-}
+        .fa-bars {
+            transition: transform 0.3s ease;
+            border: none;
+        }
+     
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+        .offcanvas {
+            width: 300px !important;
+        }
 
-/* Rotate on hover */
-.fa-bars:active {
-    transform: rotate(90deg);
-    border: none; /* Adjust the degree of rotation as needed */
-}
+        .nav-link {
+            font-size: 1.5rem !important;
+        }
 
-/* Rotate on active (click) */
-.fa-bars:hover {
-    transform: rotate(180deg);
-    border: none; /* Adjust the degree of rotation for active state */
-}
+        .offcanvas-title {
+            font-size: 2rem !important;
+        }
 
-/* Media query for screens smaller than 992px */
-@media (max-width: 991px) {
-    .fa-bars {
-        font-size: 100px !important; /* Set the font size to 100px */
+        .navbar-brand img {
+            width: 300px;
+        }
+
+        .fa-bars {
+            font-size: 80px;
+        }
     }
-}
 
-.navbar-brand img {
-    width: 15%; /* Default width for large screens */
-    float: right;
-    margin-top: 0; /* Ensure no top margin by default */
-}
+    /* Large Devices */
+    @media screen and (min-width: 992px) {
+        .navbar-brand img {
+            width: 150px;
+        }
 
-/* Media Query for screens smaller than 992px */
-@media (max-width: 991px) {
-   
-    .navbar-brand img {
-        width: 30% !important; /* Increase width to 30% for smaller screens */
-        /* Move the image 2% down from the top */
+        .fa-bars {
+            font-size: 40px;
+        }
     }
-}
+  
+        /* Rotate on hover */
+        .fa-bars:active {
+            transform: rotate(90deg);
+            border: none;
+            /* Adjust the degree of rotation as needed */
+        }
+
+        /* Rotate on active (click) */
+        .fa-bars:hover {
+            transform: rotate(180deg);
+            border: none;
+            /* Adjust the degree of rotation for active state */
+        }
+
         .carousel {
             position: relative;
             width: 100%;
@@ -418,7 +433,7 @@
                 // Hide loader and show content after 3 seconds (or adjust as needed)
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
-            }, 3000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
+            }, 2000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
         };
 
     </script>
@@ -427,58 +442,61 @@
     <div class="wrapper content" id="content" style="display: none;">
 
 
-        <!-- Nav Bar Start -->
+       
 
-        <div class="container-fluid" style="background-color: #fff;">
-            <nav class="navbar">
-                <div class="container-fluid" style="background-color: #fff;">
-                    <!-- Hamburger Menu Button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+     <!-- Nav Bar Start -->
+     <div class="container-fluid" style="background-color: #fff;">
+        <nav class="navbar">
+            <div class="container-fluid" style="background-color: #fff;">
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 
-                        <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars"></i>
 
 
-                    </button>
-                    <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png"  style="float: right;"/></a>
-                </div>
-            </nav>
-
-            <!-- Offcanvas Sidebar -->
-            <div class="offcanvas offcanvas-start text-#364967" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:#364967">KOTHARU</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">PEOPLE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="service.html">CAREERS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html">PROJECTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html">NEWS</a>
-                        </li>
-                    </ul>
-                </div>
+                </button>
+                
+                 <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png" width="15%" style="float: right;margin-top: -4%;"/></a>
             </div>
+        </nav>
 
+        <!-- Offcanvas Sidebar -->
+        <div class="offcanvas offcanvas-start text-#364967" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:#364967">KOTHARU</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">PEOPLE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">CAREERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">NEWS</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Nav Bar End -->
+    </div>
+    <!-- Nav Bar End -->    
+
+       
 
 
         <!-- Page Header Start -->

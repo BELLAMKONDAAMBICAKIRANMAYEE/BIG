@@ -46,17 +46,18 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #fff;
-    color: #121518;
+    background:black;
+    color: #ffffff;
     width: 44px;
     height: 44px;
     text-align: center;
     line-height: 1;
-    font-size: 22px;
+    font-size: 32px;
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
     z-index: 9;
+    
 }
 
 .back-to-top:hover {

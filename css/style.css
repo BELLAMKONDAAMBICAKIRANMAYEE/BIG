@@ -618,17 +618,35 @@ a:focus {
     height: 60%;
     object-fit: cover;
 }
-@media screen and (min-width:76px) {
+@media screen and (min-width:768px) {
     .about .about-img img{
         vertical-align: middle;
         width: 60%;
        
     }
 }
-
-.about .about-text p {
-    font-size: 14px;
+/* Extra small devices (phones, up to 576px) */
+@media screen and (max-width: 576px) {
+    .about .about-text .tea {
+        font-size: 34px !important; /* Larger font for extra small devices */
+    }
 }
+
+/* Small devices (phones, 576px to 768px) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .about .about-text p {
+        font-size: 20px !important; /* Adjust for small devices if needed */
+    }
+}
+
+/* Larger devices (from 769px upwards) */
+@media screen and (min-width: 769px) {
+    .about .about-text p {
+        font-size: 14px; /* Smaller font for larger screens */
+    }
+}
+
+
 
 .about .about-text a.btn {
     position: relative;

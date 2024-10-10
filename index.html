@@ -389,44 +389,72 @@
 
 <body>
 
-    <!-- Loader Section -->
-    <div id="loader">
-        <video id="preloader-video" autoplay muted loop>
-            <source src="./img/myPics/Kotharu Ventures.mp4" type="video/mp4">
+   
+<!-- Loader Section -->
+<div id="loader">
+    <video id="preloader-video" autoplay muted loop>
+        <!-- Video for medium, large, and extra-large devices -->
+        <source src="./img/myPics/LOGO ANIMATION _ WEBSITE.mp4" type="video/mp4" media="(min-width: 768px)">
+        <!-- Video for small and extra-small devices -->
+        <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4" media="(max-width: 767px)">
+    </video>
+</div>
 
-        </video>
-    </div>
-    <style>
-        /* Loader Styling */
-        #loader {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            position: relative;
-            overflow: hidden;
-            width: 100vw;
-        }
+<style>
+    /* Loader Styling */
+    #loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+    }
 
+    #preloader-video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensures the video scales nicely */
+    }
+
+    /* Media query for large screens */
+    @media (min-width: 1200px) {
         #preloader-video {
-            max-width: 100%;
-            max-height: 100%;
+            /* Add any large-screen specific styling here */
         }
-    </style>
-    <script>
-        window.onload = function () {
-            setTimeout(function () {
-                // Hide loader and show content after 3 seconds (or adjust as needed)
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            }, 3000); // Adjust the time (3000ms = 3 seconds) to match the length of your video
-        };
+    }
 
-    </script>
+    /* Media query for medium devices */
+    @media (min-width: 768px) and (max-width: 1199px) {
+        #preloader-video {
+            /* Medium devices video styling */
+        }
+    }
+
+    /* Media query for small devices */
+    @media (max-width: 767px) {
+        #preloader-video {
+            /* Small devices video styling */
+        }
+    }
+</style>
+
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            // Hide loader and show content after 3 seconds (or adjust as needed)
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 1500); // Adjust the time (3000ms = 3 seconds) to match the length of your video
+    };
+</script>
+
+
 
     <!-- preloader end -->
-    <div class="wrapper content" id="content" style="display: ;">
+    <div class="wrapper content" id="content" style="display:none ;">
 
 
         <!-- Nav Bar Start -->

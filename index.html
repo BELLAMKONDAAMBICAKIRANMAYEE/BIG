@@ -392,12 +392,7 @@
    
 <!-- Loader Section -->
 <div id="loader">
-    <video id="preloader-video" autoplay muted loop>
-        <!-- Video for medium, large, and extra-large devices -->
-        <source src="./img/myPics/LOGO ANIMATION _ WEBSITE.mp4" type="video/mp4" media="(min-width: 768px)">
-        <!-- Video for small and extra-small devices -->
-        <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4" media="(max-width: 767px)">
-    </video>
+    <!-- Placeholder for video, dynamically inserted by JavaScript -->
 </div>
 
 <style>
@@ -413,43 +408,73 @@
         width: 100vw;
     }
 
-    #preloader-video {
+    video {
         max-width: 100%;
         max-height: 100%;
-        object-fit: cover; /* Ensures the video scales nicely */
-    }
-
-    /* Media query for large screens */
-    @media (min-width: 1200px) {
-        #preloader-video {
-            /* Add any large-screen specific styling here */
-        }
-    }
-
-    /* Media query for medium devices */
-    @media (min-width: 768px) and (max-width: 1199px) {
-        #preloader-video {
-            /* Medium devices video styling */
-        }
-    }
-
-    /* Media query for small devices */
-    @media (max-width: 767px) {
-        #preloader-video {
-            /* Small devices video styling */
-        }
+        object-fit: cover; /* Ensures video scales nicely */
     }
 </style>
 
 <script>
+    function loadVideo() {
+        const loader = document.getElementById('loader');
+        const screenWidth = window.innerWidth;
+        let videoElement;
+
+        // Check screen width and insert the appropriate video element based on size
+        if (screenWidth < 576) {
+            // Extra-small devices (phones)
+            videoElement = `
+                <video id="preloader-video" autoplay muted loop>
+                    <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
+                </video>
+            `;
+        } else if (screenWidth >= 576 && screenWidth < 768) {
+            // Small devices (smaller tablets)
+            videoElement = `
+                <video id="preloader-video" autoplay muted loop>
+                    <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
+                </video>
+            `;
+        } else if (screenWidth >= 768 && screenWidth < 992) {
+            // Medium devices (tablets)
+            videoElement = `
+                <video id="preloader-video" autoplay muted loop>
+                    <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
+                </video>
+            `;
+        } else {
+            // Large devices (desktops and larger)
+            videoElement = `
+                <video id="preloader-video" autoplay muted loop>
+                    <source src="./img/myPics/LOGO ANIMATION _ WEBSITE.mp4" type="video/mp4">
+                </video>
+            `;
+        }
+
+        // Insert the video element into the loader div
+        loader.innerHTML = videoElement;
+    }
+
+    // Initial load
     window.onload = function () {
+        loadVideo();
+
+        // Hide loader after video plays for 3 seconds
         setTimeout(function () {
-            // Hide loader and show content after 3 seconds (or adjust as needed)
             document.getElementById('loader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 1500); // Adjust the time (3000ms = 3 seconds) to match the length of your video
+        }, 3000); // Adjust the time as needed
+    };
+
+    // Reload video on window resize
+    window.onresize = function () {
+        loadVideo();
     };
 </script>
+
+
+
 
 
 
@@ -556,18 +581,20 @@
                                     font-size: 16px;
                                 }
                             </style>
-                            <!-- <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
                             <a href=""><i class="fab fa-facebook-f"></i></a>
                             <a href=""><i class="fab fa-linkedin-in"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a> -->
+                            <a href=""><i class="fab fa-youtube"></i></a>
                         </div>
                        
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-12">
                     <div class="about-img">
-                        <img src="./img/myPics/Screenshot 2024-10-09 222727.png" alt="Image" width="20%">
+                        <center>
+                        <img src="./img/myPics/Screenshot 2024-10-09 222727.png" alt="Image">
+                    </center>
                     </div>
                 </div>
             </div>

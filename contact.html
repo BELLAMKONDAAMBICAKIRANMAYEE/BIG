@@ -289,97 +289,121 @@ li{
                     <p>Get In Touch</p>
                     <h2>For Any Query</h2>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="flaticon-address"></i>
-                                <div class="contact-text">
-                                    <h2>Location</h2>
-                                    <p>Hyderabad- Flat No Bo-10, Indu Fortune Fields, Annexe, Kphb colony, Kukatpally,
-                                        Hyderabad, Telangana-500085
-                                        .</p>
+                <div class="container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 mb-4"> <!-- Use col-sm-12 to ensure full width on small devices -->
+                                <div class="contact-info">
+                                    <div class="contact-item mb-4">
+                                        <i class="flaticon-address"></i>
+                                        <div class="contact-text">
+                                            <h2>Location</h2>
+                                            <p>Hyderabad- Flat No Bo-10, Indu Fortune Fields, Annexe, Kphb colony, Kukatpally,
+                                                Hyderabad, Telangana-500085.</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item mb-4">
+                                        <i class="flaticon-call"></i>
+                                        <div class="contact-text">
+                                            <h2>Phone</h2>
+                                            <p>+91 4071385954</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item mb-4">
+                                        <i class="flaticon-send-mail"></i>
+                                        <div class="contact-text">
+                                            <h2>Email</h2>
+                                            <p>info@kvpl.org</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="contact-item">
-                                <i class="flaticon-call"></i>
-                                <div class="contact-text">
-                                    <h2>Phone</h2>
-                                    <p>+91 4071385954</p>
-                                    <!-- <p>
-
-                                        +91 7999999990</p> -->
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="flaticon-send-mail"></i>
-                                <div class="contact-text">
-                                    <h2>Email</h2>
-                                    <p>info@kvpl.org</p>
+                    
+                            <div class="col-12 col-sm-12 col-md-6"> <!-- Again, use col-sm-12 for full width on smaller devices -->
+                                <div class="contact-form">
+                                    <div id="success"></div>
+                                    <form name="sentMessage" id="contactForm">
+                                        <div class="control-group mb-3">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required />
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="control-group mb-3">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="control-group mb-3">
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required />
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="control-group mb-3">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send Message</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="contact-form">
-                            <div id="success"></div>
-                            <form name="sentMessage" id="contactForm">
-                                <div class="control-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required="required" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Message" required="required"></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                        <script>
-                            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                                event.preventDefault(); // Prevent the form from submitting in the traditional way
-                        
-                                var formData = new FormData(this);
-                        
-                                fetch('https://script.google.com/macros/s/AKfycbxZUa7DOXjIVY5qJPjXCzKu7s3YmiLZjHzeJMnzWEUwHzKNhctFRg7HmP02m7quB_S3/exec', { // Update this line with your actual deployment URL
-                                    
-                                    method: 'POST',
-                                    body: formData,
-                                })
-                                .then(response => {
-                                    if (!response.ok) { // Check if response is OK
-                                        throw new Error('Network response was not ok ' + response.statusText);
-                                    }
-                                    return response.text();
-                                })
-                                .then(data => {
-                                    console.log('Response Data:', data); // Log the response data
-                                    document.getElementById('success').innerText = data; // Display success message
-                                })
-                                .catch(error => {
-                                    console.error('Error:', error);
-                                    document.getElementById('success').innerText = 'There was an error submitting the form: ' + error.message;
-                                });
-                            });
-                        </script>
-                        
-                        
-                        
-                                                    
                     </div>
                     
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function(event) {
+                            event.preventDefault(); // Prevent the form from submitting in the traditional way
+                    
+                            var formData = new FormData(this);
+                    
+                            fetch('https://script.google.com/macros/s/AKfycbxZUa7DOXjIVY5qJPjXCzKu7s3YmiLZjHzeJMnzWEUwHzKNhctFRg7HmP02m7quB_S3/exec', {
+                                method: 'POST',
+                                body: formData,
+                            })
+                            .then(response => {
+                                if (!response.ok) { // Check if response is OK
+                                    throw new Error('Network response was not ok ' + response.statusText);
+                                }
+                                return response.text();
+                            })
+                            .then(data => {
+                                console.log('Response Data:', data); // Log the response data
+                                document.getElementById('success').innerText = data; // Display success message
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                document.getElementById('success').innerText = 'There was an error submitting the form: ' + error.message;
+                            });
+                        });
+                    </script>
+                    
                 </div>
+                
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent the form from submitting in the traditional way
+                
+                        var formData = new FormData(this);
+                
+                        fetch('https://script.google.com/macros/s/AKfycbxZUa7DOXjIVY5qJPjXCzKu7s3YmiLZjHzeJMnzWEUwHzKNhctFRg7HmP02m7quB_S3/exec', {
+                            method: 'POST',
+                            body: formData,
+                        })
+                        .then(response => {
+                            if (!response.ok) { // Check if response is OK
+                                throw new Error('Network response was not ok ' + response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(data => {
+                            console.log('Response Data:', data); // Log the response data
+                            document.getElementById('success').innerText = data; // Display success message
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            document.getElementById('success').innerText = 'There was an error submitting the form: ' + error.message;
+                        });
+                    });
+                </script>
+                
                 
             </div>
         </div>

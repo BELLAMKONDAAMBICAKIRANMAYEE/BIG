@@ -10,9 +10,11 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -123,45 +125,50 @@
         }
 
 
-    /* Default Style */
-.fa-bars {
-    font-size: 39px;
-    transition: transform 0.3s ease;
-}
+        /* Default Style */
+        .fa-bars {
+            font-size: 39px;
+            transition: transform 0.3s ease;
+        }
 
-/* Rotate on hover */
-/* .fa-bars:active {
+        /* Rotate on hover */
+        /* .fa-bars:active {
     transform: rotate(90deg);
     border: none;
 } */
 
-/* Rotate on active (click) */
-/* .fa-bars:hover {
+        /* Rotate on active (click) */
+        /* .fa-bars:hover {
     transform: rotate(180deg);
     border: none; 
 } */
 
-/* Media query for screens smaller than 992px */
-@media (max-width: 991px) {
-    .fa-bars {
-        font-size: 100px !important; /* Set the font size to 100px */
-    }
-}
+        /* Media query for screens smaller than 992px */
+        @media (max-width: 991px) {
+            .fa-bars {
+                font-size: 100px !important;
+                /* Set the font size to 100px */
+            }
+        }
 
-.navbar-brand img {
-    width: 15%; /* Default width for large screens */
-    float: right;
-    margin-top: 0; /* Ensure no top margin by default */
-}
+        .navbar-brand img {
+            width: 15%;
+            /* Default width for large screens */
+            float: right;
+            margin-top: 0;
+            /* Ensure no top margin by default */
+        }
 
-/* Media Query for screens smaller than 992px */
-@media (max-width: 991px) {
-   
-    .navbar-brand img {
-        width: 30% !important; /* Increase width to 30% for smaller screens */
-        /* Move the image 2% down from the top */
-    }
-}
+        /* Media Query for screens smaller than 992px */
+        @media (max-width: 991px) {
+
+            .navbar-brand img {
+                width: 30% !important;
+                /* Increase width to 30% for smaller screens */
+                /* Move the image 2% down from the top */
+            }
+        }
+
         .carousel {
             position: relative;
             width: 100%;
@@ -389,89 +396,120 @@
 
 <body>
 
-   
-<!-- Loader Section -->
-<div id="loader">
-    <!-- Placeholder for video, dynamically inserted by JavaScript -->
-</div>
 
-<style>
-    /* Loader Styling */
-    #loader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: black;
-        position: relative;
-        overflow: hidden;
-        width: 100vw;
-    }
+    <!-- Loader Section -->
+    <div id="loader">
+        <!-- Placeholder for video, dynamically inserted by JavaScript -->
+    </div>
+    <style>
+        .bgg {
+            background-image: url('./img/myPics/Hero\ Image.png');
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            background-size: cover;
+            /* Cover the entire container */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Prevent the image from repeating */
+        }
 
-    video {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover; /* Ensures video scales nicely */
-    }
-</style>
+        @media screen and (max-width:992px) {
+            .bgg {
+                background-image: url('./img/myPics/Hero\ Image.png');
+                width: 100%;
+                height: 20vh;
+                /* Full viewport height */
+                background-size: contain;
+                /* Cover the entire container */
+                background-position: center;
+                /* Center the image */
+                background-repeat: no-repeat;
 
-<script>
-    function loadVideo() {
-        const loader = document.getElementById('loader');
-        const screenWidth = window.innerWidth;
-        let videoElement;
+                /* Prevent the image from repeating */
+            }
+        }
+    </style>
 
-        // Check screen width and insert the appropriate video element based on size
-        if (screenWidth < 576) {
-            // Extra-small devices (phones)
-            videoElement = `
+    <style>
+        /* Loader Styling */
+        #loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            /* Ensures video scales nicely */
+        }
+    </style>
+
+    <script>
+        function loadVideo() {
+            const loader = document.getElementById('loader');
+            const screenWidth = window.innerWidth;
+            let videoElement;
+
+            // Check screen width and insert the appropriate video element based on size
+            if (screenWidth < 576) {
+                // Extra-small devices (phones)
+                videoElement = `
                 <video id="preloader-video" autoplay muted loop>
                     <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
                 </video>
             `;
-        } else if (screenWidth >= 576 && screenWidth < 768) {
-            // Small devices (smaller tablets)
-            videoElement = `
+            } else if (screenWidth >= 576 && screenWidth < 768) {
+                // Small devices (smaller tablets)
+                videoElement = `
                 <video id="preloader-video" autoplay muted loop>
                     <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
                 </video>
             `;
-        } else if (screenWidth >= 768 && screenWidth < 992) {
-            // Medium devices (tablets)
-            videoElement = `
+            } else if (screenWidth >= 768 && screenWidth < 992) {
+                // Medium devices (tablets)
+                videoElement = `
                 <video id="preloader-video" autoplay muted loop>
                     <source src="./img/myPics/LOGO ANIMATION _ MOBILE.mp4" type="video/mp4">
                 </video>
             `;
-        } else {
-            // Large devices (desktops and larger)
-            videoElement = `
+            } else {
+                // Large devices (desktops and larger)
+                videoElement = `
                 <video id="preloader-video" autoplay muted loop>
                     <source src="./img/myPics/LOGO ANIMATION _ WEBSITE.mp4" type="video/mp4">
                 </video>
             `;
+            }
+
+            // Insert the video element into the loader div
+            loader.innerHTML = videoElement;
         }
 
-        // Insert the video element into the loader div
-        loader.innerHTML = videoElement;
-    }
+        // Initial load
+        window.onload = function () {
+            loadVideo();
 
-    // Initial load
-    window.onload = function () {
-        loadVideo();
+            // Hide loader after video plays for 3 seconds
+            setTimeout(function () {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 3000); // Adjust the time as needed
+        };
 
-        // Hide loader after video plays for 3 seconds
-        setTimeout(function () {
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        }, 3000); // Adjust the time as needed
-    };
-
-    // Reload video on window resize
-    window.onresize = function () {
-        loadVideo();
-    };
-</script>
+        // Reload video on window resize
+        window.onresize = function () {
+            loadVideo();
+        };
+    </script>
 
 
 
@@ -495,7 +533,8 @@
 
 
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png"  style="float: right;"/></a>
+                    <a class="navbar-brand" href="#"><img src="img/myPics/PRIMARY LOGO- KOTHARU X MC-03.png"
+                            style="float: right;" /></a>
                 </div>
             </nav>
 
@@ -503,7 +542,7 @@
             <div class="offcanvas offcanvas-start text-#364967" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel" style="background-color: #fff; width: 150px;">
                 <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:#fff">KOTHARU</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color:#fff">KOTHARU</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -535,14 +574,16 @@
 
         <!-- Nav Bar End -->
 
+        <section class="bgg">
 
+        </section>
         <!-- Page Header Start -->
         <div class="page-header" style="margin-top: -1%;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <h2>About Us</h2>
-                        <h3>VALUES | VERSIALITY | SUSTAINABILITY</h3>
+
                     </div>
 
                 </div>
@@ -553,28 +594,31 @@
 
         <!-- About Start -->
         <div class="about wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row align-items-center">
+            <!-- <div class="row align-items-center">
 
                 <div class="col-lg-12 col-md-12">
                     <img src="https://ik.imagekit.io/dlnx2cwu4w//wp-content/uploads/2022/11/wallpapergallery.jpg"
                         width="100%" />
                 </div>
-            </div>
+            </div> -->
 
             <div class="row align-items-center mt-5">
-                      
+
                 <div class="col-12 col-lg-12 col-md-12">
-                
-                    <div class="about-text" >   
+
+                    <div class="about-text">
                         <p style="font-size: 16px;" align="justify">
-                            We are a team driven by the belief that it's time to take our construction principles to the next level. At the core of our philosophy is a deep commitment to environmental responsibility, ensuring that our work not only inspires but also sustains. At KVPL we offer cutting-edge design strategies and innovative construction techniques for new age homes.
+                            We are a team driven by the belief that it's time to take our construction principles to the
+                            next level. At the core of our philosophy is a deep commitment to environmental
+                            responsibility, ensuring that our work not only inspires but also sustains. At KVPL we offer
+                            cutting-edge design strategies and innovative construction techniques for new age homes.
 
                         </p>
-                      
-                       
+
+
                     </div>
                 </div>
-             
+
             </div>
             <!-- Mission Start-->
             <div class="row mt-5 mb-5">
@@ -588,7 +632,10 @@
                                     </div>
                                     <div class="feature-text">
                                         <h3>Mission</h3>
-                                        <p>"Our mission is to provide high-quality construction services at reasonable prices, while upholding a strong commitment to environmental responsibility. We strive to deliver projects that combine exceptional craftsmanship with sustainability, ensuring lasting value for our clients and the planet."</p>
+                                        <p>"Our mission is to provide high-quality construction services at reasonable
+                                            prices, while upholding a strong commitment to environmental responsibility.
+                                            We strive to deliver projects that combine exceptional craftsmanship with
+                                            sustainability, ensuring lasting value for our clients and the planet."</p>
                                     </div>
                                 </div>
                             </div>
@@ -599,7 +646,12 @@
                                     </div>
                                     <div class="feature-text">
                                         <h3>Vision</h3>
-                                        <p>"Our vision is to create innovative, new-age design solutions that seamlessly integrate sustainability at every stage of the process. We strive to fuse futuristic designs with traditional values, crafting spaces that are both sophisticated and luxurious. With a focus on climate-conscious architecture, we aim to infuse art and culture into our designs, creating timeless and inspiring environments."</p>
+                                        <p>"Our vision is to create innovative, new-age design solutions that seamlessly
+                                            integrate sustainability at every stage of the process. We strive to fuse
+                                            futuristic designs with traditional values, crafting spaces that are both
+                                            sophisticated and luxurious. With a focus on climate-conscious architecture,
+                                            we aim to infuse art and culture into our designs, creating timeless and
+                                            inspiring environments."</p>
                                     </div>
                                 </div>
                             </div>
@@ -610,7 +662,7 @@
             </div>
             <!-- Mission End-->
             <!-- Landscape -->
-            <div class="row" style="margin-top: 3%;">
+            <!-- <div class="row" style="margin-top: 3%;">
                 <h3 align="left" class="headings">INTERIOR DESIGN</h3>
 
                 <div class="col-12 col-md-12 col-lg-6 ">
@@ -653,7 +705,8 @@
                                 Card 1 Content
                                 <span class="toggle-button">+</span>
                                 <div class="extra-content hidden" id="content1">
-                                    <p  align="justify">Our knowledge of building codes, design methods, and construction techniques
+                                    <p align="justify">Our knowledge of building codes, design methods, and construction
+                                        techniques
                                         around the world provides a basis for developing creative design solutions which
                                         push the boundaries of what is possible. Integrating with the architectural and
                                         landscape teams allows for rapid development of building forms, as the results
@@ -747,11 +800,11 @@
                     <div class="carousel-pagination"></div>
                 </div>
 
-            </div>
+            </div> -->
 
             <!-- ENGINEERING -->
 
-            <div class="row" style="margin-top: 3%;">
+            <!-- <div class="row" style="margin-top: 3%;">
                 <h3 align="left" class="headings">ENGINEERING</h3>
 
                 <div class="col-12 col-md-12 col-lg-6 ">
@@ -887,7 +940,7 @@
                     <button class="carousel-next">❯</button>
                     <div class="carousel-pagination"></div>
                 </div>
-            </div>
+            </div> -->
             <!-- ARCHITECTURE -->
 
             <!-- <div class="row" style="margin-top: 3%;">
@@ -1575,8 +1628,7 @@
 
 
         <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s"
-            style="background-color: #fff;color:#364967;font-size: 15px;">
+        <div class="footer wow fadeIn" data-wow-delay="0.3s" style="font-size: 15px;">
             <div class="container">
                 <div class="row">
 
@@ -1595,7 +1647,7 @@
                         <div class="extra-contents hiddenss">
                             <a>Hyderabad- Flat No Bo-10, Indu Fortune Fields, Annexe, Kphb colony, Kukatpally,
                                 Hyderabad, Telangana-500085
-                                </a>
+                            </a>
                             <!-- <a href="#office2">Office 2</a>
                             <a href="#office3">Office 3</a>
                             <a href="#office4">Office 4</a>
@@ -1640,28 +1692,29 @@
                     });
                 </script>
             </div>
-</div>
+        </div>
 
-            <div class="container copyright mt-5">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h3 style=" font-family: Gothic A1, sans-serif;font-size: 25px;">CREATIVITY MEETS RESPONSIBILITY</h3>
-                        <p style="font-size: 15px;">&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
-                        <p>Designed By <a href="">AY</a></p>
-                    </div>
-
-
-                    
-                       
-                    
+        <div class="container copyright mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 style=" font-family: Gothic A1, sans-serif;font-size: 25px;">CREATIVITY MEETS RESPONSIBILITY
+                    </h3>
+                    <p style="font-size: 15px;">&copy; <a href="">KOTHARU VENTURES</a>, All Right Reserved.</p>
+                    <p>Designed By <a href="">AY</a></p>
                 </div>
+
+
+
+
+
             </div>
-        
+        </div>
+
         <!-- Footer End -->
 
         <a href="#content" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
-   
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
